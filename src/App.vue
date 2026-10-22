@@ -29,5 +29,8 @@
     </nav>
     <router-view />
   </div>
+  <footer class="bg-black text-center">
+    <p class="text-white">By Luka Mlinko RN89/25</p>
+  </footer>
 </template>
 <style scoped></style>
