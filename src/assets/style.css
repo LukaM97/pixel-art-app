@@ -28,4 +28,8 @@
     }
 }
 
+a, router-link {
+  @apply text-zinc-100 hover:text-zinc-200 transition-colors font-bold text-shadow-lg/30;
+}
+
 
