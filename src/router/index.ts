@@ -9,6 +9,11 @@ const router = createRouter({
       name: 'Home',
       component: HomePage 
     },
+    {
+      path: '/gallery',         
+      name: 'Gallery',
+      component: HomePage 
+    },
   ],
 })
 
