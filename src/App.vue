@@ -13,7 +13,7 @@
             <router-link :to="{ name: 'Gallery' }">Gallery</router-link>
           </div>
           <div>
-            <a>New</a>
+            <router-link :to="{ name: 'New' }">New</router-link>
           </div>
           <div>
             <a>Login</a>

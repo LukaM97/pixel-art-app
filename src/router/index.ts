@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '@/pages/HomePage.vue'
+import DrawPage from '@/pages/DrawPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,6 +14,11 @@ const router = createRouter({
       path: '/gallery',         
       name: 'Gallery',
       component: HomePage 
+    },
+    {
+      path: '/new',         
+      name: 'New',
+      component: DrawPage 
     },
   ],
 })

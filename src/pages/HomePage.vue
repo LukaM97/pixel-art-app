@@ -10,9 +10,7 @@
     <div class="absolute left-0 right-0 top-[10%] items-center w-full flex flex-col">
         <div class="text-black text-7xl font-bold font-display text-center">Create cool art</div>
         <div class="flex justify-around gap-2 mt-32">
-            <img class="h-[500px] w-[500px] border-12 border-solid shadow-lg shadow-white" src="@/assets/images/image.png">
-            <img class="h-[500px] w-[500px] border-12 border-solid shadow-lg shadow-white" src="@/assets/images/image2.png">
-            <img class="h-[500px] w-[500px] border-12 border-solid shadow-lg shadow-white" src="@/assets/images/image2.png">
+            <img v-for="(image,index) in images" :key=index :class=image.class :src=image.src>
         </div>
     </div>
   </div>
@@ -32,4 +30,11 @@
   import { ref } from "vue";
 
   const pageHeader = ref('Pixel Art App')
+  const imageClass = ref('h-[500px] w-[500px] border-12 border-solid shadow-lg shadow-white')
+
+  const images = ref([
+    {class: imageClass, src: new URL('@/assets/images/image.png', import.meta.url).href},
+    {class: imageClass, src: new URL('@/assets/images/image2.png', import.meta.url).href},
+    {class: imageClass, src: new URL('@/assets/images/image2.png', import.meta.url).href}
+  ])
 </script>
