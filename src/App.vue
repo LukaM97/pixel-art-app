@@ -16,10 +16,10 @@
             <router-link :to="{ name: 'New' }">New</router-link>
           </div>
           <div>
-            <a>Login</a>
+             <router-link :to="{ name: 'Login' }">Login</router-link>
           </div>
           <div>
-            <a>Register</a>
+            <router-link :to="{ name: 'Register' }">Register</router-link>
           </div>
           <div>
             <a>Logout</a>
