@@ -1,7 +1,7 @@
 <template>
     <div class="flex justify-between my-16 ml-16" :style="customIconUrl">
         <div class="flex flex-wrap shadow-2xl shadow-black" :style="{ width: containerSize + 'px', height: containerSize + 'px'}">
-            <div v-for="i in totalSquares" :key=i :class=divClass></div>
+            <div class="w-[10px] h-[10px] border-1" v-for="i in totalSquares" :key=i :style="{backgroundColor : divColors[i]}" @click.self="drawColor(i)"></div>
         </div>
         <div class="flex flex-col items-center gap-5 border-6 w-[100px]">
             <div class="mt-8 border-4 rounded-2xl p-2" @click="setTool('cursor')">
@@ -33,7 +33,6 @@
     const n = 140;
     const totalSquares = ref(n*n);
     const containerSize = ref(10*n);
-    const divClass=ref("w-[10px] h-[10px] border-1")
     const currentColor= ref('black')
     const currentTool = ref('cursor')
 
@@ -61,6 +60,11 @@
 
     const setColor = (color: string) => {
         currentColor.value = color
+    }
+
+    const divColors = ref<Record<number, string>>({})
+    const drawColor = (i : number) => {
+        divColors.value[i] = currentColor.value
     }
 
     const setTool = (tool: string) => {
