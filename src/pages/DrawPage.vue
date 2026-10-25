@@ -64,6 +64,7 @@
 
     const divColors = ref<Record<number, string>>({})
     const drawColor = (i : number) => {
+        if(currentTool.value !== 'pen') return
         divColors.value[i] = currentColor.value
     }
 
